@@ -1,25 +1,41 @@
+import { FaCarSide } from 'react-icons/fa';
+import { GrBusinessService } from 'react-icons/gr';
+import { MdOutlinePayment } from 'react-icons/md';
+
 const BestTree = () => {
   return (
     <div className="my-[120px] lg:p-0 p-6">
-      <div className=" lg:w-4/5 mx-auto text-center">
-        <h2 className="text-xl font-bold text-center mb-3">
-          {' '}
-          Discovering the Beauty and Wisdom of Trees
-        </h2>
-        <p>
-          Step into the serene world of trees with Sylvan Sanctuaries. Our
-          platform is dedicated to celebrating the majestic and diverse beauty
-          of trees, from towering ancient giants to delicate saplings. Explore
-          the intricate ecosystems that trees support and learn about their
-          critical role in sustaining life on Earth. Through captivating visuals
-          and insightful articles, Sylvan Sanctuaries invites you to deepen your
-          connection to nature and appreciate the profound wisdom that trees
-          have to offer. Join us on this journey to uncover the secrets of these
-          silent guardians of our planet
-        </p>
+      <div className=" flex justify-around text-center gap-6">
+        <div className="flex items-center p-6 border rounded-lg border-[#82b440] gap-3">
+          <div>
+            <FaCarSide className="text-6xl text-[#82b440]" />
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold">Free Delivery</h2>
+            <p>Free shipping around the world for all orders over $120</p>
+          </div>
+        </div>
+        <div className="flex items-center p-6 border rounded-lg border-[#82b440] gap-3">
+          <div>
+            <MdOutlinePayment className="text-6xl text-[#82b440]" />
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold">Safe Payment</h2>
+            <p>With our payment gateway, don’t worry about your information</p>
+          </div>
+        </div>
+        <div className="flex items-center p-6 border rounded-lg border-[#82b440] gap-3">
+          <div>
+            <GrBusinessService className="text-6xl text-[#82b440]" />
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold">Friendly Services</h2>
+            <p>You have 30-day return guarantee for every single order</p>
+          </div>
+        </div>
       </div>
 
-      <div className="mt-12 lg:flex gap-6 ">
+      <div className="mt-16 lg:flex gap-6 ">
         <div className=" lg:w-1/2">
           <img className="w-full  h-[80%]" src="/mango.jfif" alt="" />
         </div>
