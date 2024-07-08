@@ -1,4 +1,5 @@
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -46,7 +47,7 @@ const Login = () => {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-green-500 w-full hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none btn focus:shadow-outline"
+              className="bg-green-500 w-full  hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none btn focus:shadow-outline"
               type="button"
             >
               Login
@@ -73,12 +74,11 @@ const Login = () => {
           </div>
           <p className="text-gray-600 text-sm mt-4">
             Don't have an account?{' '}
-            <a
-              href="#"
-              className="text-green-500 font-bold hover:text-green-800"
-            >
-              Sign up
-            </a>
+            <Link to={'/signUp'}>
+              <a className="text-green-500 font-bold hover:text-green-800">
+                Sign up
+              </a>
+            </Link>
           </p>
         </div>
       </div>
