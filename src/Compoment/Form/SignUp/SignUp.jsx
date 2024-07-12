@@ -1,11 +1,41 @@
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 
 const SignUp = () => {
+  const {
+    handileClickCreate,
+    handileClickLogOut,
+    user,
+    loading,
+    handileClickGoogle,
+    handileUpdate,
+  } = useAuth();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = data => {
+    console.log(data);
+    const { fullName, email, photo, password } = data;
+
+    const img = photo[0];
+    const formData = new FormData();
+    formData.append('image', img);
+
+    handileClickCreate(email, password).then(res => {
+      if (res.user) {
+        console.log(res.user);
+      }
+    });
+  };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md border border-[#82b440]">
         <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -19,6 +49,7 @@ const SignUp = () => {
               type="text"
               placeholder="Enter your name"
               style={{ borderColor: '#82b440' }}
+              {...register('fullName', { required: true })}
             />
           </div>
           <div className="mb-4">
@@ -34,6 +65,7 @@ const SignUp = () => {
               type="email"
               placeholder="Enter your email"
               style={{ borderColor: '#82b440' }}
+              {...register('email', { required: true })}
             />
           </div>
           <div className="mb-4">
@@ -49,6 +81,7 @@ const SignUp = () => {
               type="file"
               placeholder="Upload your photo"
               style={{ borderColor: '#82b440' }}
+              {...register('photo', { required: true })}
             />
           </div>
           <div className="mb-6">
@@ -64,12 +97,13 @@ const SignUp = () => {
               type="password"
               placeholder="Enter your password"
               style={{ borderColor: '#82b440' }}
+              {...register('password', { required: true })}
             />
           </div>
           <div className="flex items-center justify-between mb-4">
             <button
               className="bg-gradient-to-r btn w-full from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
             >
               Sign Up
             </button>
