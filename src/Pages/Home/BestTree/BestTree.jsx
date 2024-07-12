@@ -4,7 +4,7 @@ import { MdOutlinePayment } from 'react-icons/md';
 
 const BestTree = () => {
   return (
-    <div className="my-[120px] lg:p-0 p-6">
+    <div className="mt-12 lg:p-0 p-6">
       <div className=" flex justify-around text-center gap-6">
         <div className="flex items-center p-6 border rounded-lg border-[#82b440] gap-3">
           <div>
