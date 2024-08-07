@@ -1,12 +1,66 @@
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import useAxiosPublice from '../../../Hooks/useAuthPublice/useAxiosPublice';
 
 const Login = () => {
+  const { handileClickSignUser, handileClickGoogle } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [error, setErrors] = useState('');
+  const axiosPublice = useAxiosPublice();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = data => {
+    console.log(data);
+    const { email, password } = data;
+    handileClickSignUser(email, password)
+      .then(res => {
+        if (res.user) {
+          setErrors('');
+          navigate(location.state || '/');
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        setErrors('Invalid email or password. Please try again');
+      });
+  };
+
+  const handileClicksGoogleLogin = () => {
+    handileClickGoogle()
+      .then(res => {
+        console.log(res.user);
+        const userInfo = {
+          email: res.user.email,
+          fullName: res.user.displayName,
+          image: res.user.photoURL,
+          role: 'user',
+        };
+
+        if (res.user) {
+          navigate(location.state || '/');
+          axiosPublice.post('/users', userInfo).then(res => {
+            console.log(res.data);
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-[100px]">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -20,6 +74,7 @@ const Login = () => {
               type="email"
               placeholder="Enter your email"
               style={{ borderColor: '#82b440' }}
+              {...register('email', { required: true })}
             />
           </div>
           <div className="mb-6">
@@ -35,6 +90,7 @@ const Login = () => {
               type="password"
               placeholder="Enter your password"
               style={{ borderColor: '#82b440' }}
+              {...register('password', { required: true })}
             />
           </div>
           <div className="flex items-center justify-between mb-4">
@@ -45,10 +101,11 @@ const Login = () => {
               Forgot Password?
             </a>
           </div>
+          <p className="font-semibold text-center text-red-600">{error}</p>
           <div className="flex items-center justify-between">
             <button
               className="bg-green-500 w-full  hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none btn focus:shadow-outline"
-              type="button"
+              type="submit"
             >
               Login
             </button>
@@ -58,6 +115,7 @@ const Login = () => {
           <p className="text-gray-600 text-sm mb-2">Or login with</p>
           <div className="flex justify-center space-x-4">
             <button
+              onClick={handileClicksGoogleLogin}
               className="flex items-center bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
             >

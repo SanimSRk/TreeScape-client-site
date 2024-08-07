@@ -1,4 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import { FaUser } from 'react-icons/fa';
 
 const Naver = () => {
   const navlinks = (
@@ -7,32 +9,48 @@ const Naver = () => {
         to={'/'}
         className={({ isActive }) =>
           isActive
-            ? 'bg-[#6a8c33] font-semibold  px-3 py-2 rounded-md'
-            : 'font-semibold px-4 py-3  '
+            ? 'bg-gray-700 font-semibold  px-3 py-2 rounded-md'
+            : 'font-semibold px-3 py-2  '
         }
       >
         Home
       </NavLink>
       <NavLink
+        to={'/products'}
         className={({ isActive }) =>
           isActive
-            ? 'bg-[#6a8c33] font-semibold  px-3 py-2 rounded-md'
-            : 'font-semibold px-4 py-3  '
+            ? 'bg-gray-700 font-semibold  px-3 py-2 rounded-md'
+            : 'font-semibold px-3 py-2  '
         }
       >
-        About
+        Product
       </NavLink>
       <NavLink
+        to={'/blogs'}
         className={({ isActive }) =>
           isActive
-            ? 'bg-[#6a8c33] font-semibold  px-3 py-2 rounded-md'
-            : 'font-semibold px-4 py-3  '
+            ? 'bg-gray-700 font-semibold  px-3 py-2 rounded-md'
+            : 'font-semibold px-3 py-2  '
         }
       >
         Blogs
       </NavLink>
+      <NavLink
+        to={'/dashboard'}
+        className={({ isActive }) =>
+          isActive
+            ? 'bg-gray-700 font-semibold  px-3 py-2 rounded-md'
+            : 'font-semibold px-3 py-2  '
+        }
+      >
+        Dashboard
+      </NavLink>
     </>
   );
+  const { user, handileClickLogOut } = useAuth();
+  const handileClickLogouts = () => {
+    handileClickLogOut();
+  };
   return (
     <div>
       <div className="navbar bg-[#82b440] text-[#FFFFFF] rounded-lg items-center">
@@ -69,43 +87,50 @@ const Naver = () => {
           <ul className="menu menu-horizontal px-1 gap-4">{navlinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link to={'/login'}>
-            {' '}
-            <a className="btn bg-[#FFA500] font-bold border-none text-white">
-              Login
-            </a>
-          </Link>
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-12 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+          {user ? (
+            <div className="dropdown dropdown-end z-10 text-black">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-12 h-12 rounded-full grid justify-center text-center items-center border border-white">
+                  {user?.photoURL ? (
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src={user?.photoURL}
+                    />
+                  ) : (
+                    <FaUser className="text-3xl text-white" />
+                  )}
+                </div>
               </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content text-black bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a className="justify-between">
+                    {user?.displayName || 'Not found'}
+                    <span className="badge">New</span>
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li onClick={handileClickLogouts}>
+                  <a>Logout</a>
+                </li>
+              </ul>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
+          ) : (
+            <Link to={'/login'}>
+              {' '}
+              <a className="btn bg-[#FFA500] font-bold border-none text-white">
+                Login
+              </a>
+            </Link>
+          )}
         </div>
       </div>
     </div>
