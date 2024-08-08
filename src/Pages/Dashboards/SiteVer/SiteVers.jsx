@@ -29,7 +29,7 @@ const SiteVers = () => {
             className="drawer-overlay"
           ></label>
           <ul
-            className="menu  min-h-full w-60 p-4  gap-2
+            className="menu  min-h-full fixed w-60 p-4  gap-2
            bg-[#82b440] text-[#FFFFFF]"
           >
             {/* Sidebar content here */}

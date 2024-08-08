@@ -1,9 +1,25 @@
+import { useQuery } from '@tanstack/react-query';
+import useAxiosPublice from '../../Hooks/useAuthPublice/useAxiosPublice';
+import { useState } from 'react';
+import ProductsCartd from './ProductsCartd';
+
 const Products = () => {
+  const axiosPublice = useAxiosPublice();
+  const [productData, setProductData] = useState([]);
+  const { data, refetch } = useQuery({
+    queryKey: ['product-data'],
+    queryFn: async () => {
+      const { data } = await axiosPublice.get('/products-shows');
+      setProductData(data);
+      return data;
+    },
+  });
+  console.log(productData);
   const handileClickSearchProducts = e => {
     e.preventDefualt();
   };
   return (
-    <div>
+    <div className="">
       <div className="grid mt-3 justify-center w-full items-center rounded-lg md:h-[420px] h-[320px] lg:h-[550px] bg-center bg-cover bg-[linear-gradient(90deg,rgb(21,21,21,0.7),rgba(21,21,21,0.7)100%),url(/pexels-enginakyurt-10364572.jpg)] ">
         {' '}
         <div className="">
@@ -26,6 +42,11 @@ const Products = () => {
             </div>
           </form>
         </div>
+      </div>
+      <div className="grid  my-[120px] lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+        {productData?.map(product => (
+          <ProductsCartd key={product._id} products={product}></ProductsCartd>
+        ))}
       </div>
     </div>
   );

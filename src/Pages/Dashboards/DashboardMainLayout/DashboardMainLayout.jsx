@@ -4,7 +4,9 @@ import SiteVers from '../SiteVer/SiteVers';
 const DashboardMainLayout = () => {
   return (
     <div className=" lg:flex lg:gap-7">
-      <SiteVers></SiteVers>
+      <div className="w-60">
+        <SiteVers></SiteVers>
+      </div>
       <Outlet></Outlet>
     </div>
   );
