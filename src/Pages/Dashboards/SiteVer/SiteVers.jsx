@@ -10,7 +10,7 @@ const SiteVers = () => {
   const { userData, refetch } = useUsers();
   console.log(userData);
   return (
-    <div>
+    <div className="z-10">
       <div className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
@@ -22,7 +22,7 @@ const SiteVers = () => {
             Open drawer
           </label>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side z-10">
           <label
             htmlFor="my-drawer-2"
             aria-label="close sidebar"
@@ -50,7 +50,7 @@ const SiteVers = () => {
                 </li>
                 <li>
                   <NavLink
-                    to={'usersHome'}
+                    to={'my-products'}
                     className={({ isActive }) =>
                       isActive
                         ? 'bg-gray-700 font-semibold '

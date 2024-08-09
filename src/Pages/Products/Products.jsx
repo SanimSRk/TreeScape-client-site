@@ -16,7 +16,12 @@ const Products = () => {
   });
   console.log(productData);
   const handileClickSearchProducts = e => {
-    e.preventDefualt();
+    e.preventDefault();
+    const searchValue = e.target.search.value;
+    console.log(searchValue);
+    axiosPublice.get(`/user-searchData?search=${searchValue}`).then(res => {
+      console.log(res.data);
+    });
   };
   return (
     <div className="">
@@ -29,7 +34,7 @@ const Products = () => {
                 className="shadow appearance-none  border-2 rounded-lg w-full border-[#82b440] md:w-[350px] lg:w-[450px]  input input-bordered text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500 rounded-r-none"
                 id="search"
                 type="search"
-                k
+                name="search"
                 placeholder="Search your products......"
                 style={{ borderColor: '#82b440' }}
               />
@@ -43,10 +48,14 @@ const Products = () => {
           </form>
         </div>
       </div>
-      <div className="grid  my-[120px] lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-        {productData?.map(product => (
-          <ProductsCartd key={product._id} products={product}></ProductsCartd>
-        ))}
+      <div className="my-[120px]">
+        <h2 className="text-xl font-bold text-center mb-6">Ours Collection</h2>
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          {productData?.map(product => (
+            <ProductsCartd key={product._id} products={product}></ProductsCartd>
+          ))}
+        </div>
       </div>
     </div>
   );

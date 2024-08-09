@@ -8,6 +8,7 @@ import Products from './Pages/Products/Products';
 import UserHome from './Pages/Dashboards/User/UserHmoe/UserHome';
 import AdminHome from './Pages/Dashboards/AdminSection/AdminHome/AdminHome';
 import AddItems from './Pages/Dashboards/AdminSection/AddItems/AddItems';
+import MyCards from './Pages/Dashboards/User/MyCards/MyCards';
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ export const router = createBrowserRouter([
       {
         path: 'additems',
         element: <AddItems></AddItems>,
+      },
+      // -----------------user rout section--------------
+      {
+        path: 'my-products',
+        element: <MyCards></MyCards>,
       },
     ],
   },
