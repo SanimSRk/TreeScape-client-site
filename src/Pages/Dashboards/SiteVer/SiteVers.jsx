@@ -76,59 +76,63 @@ const SiteVers = () => {
                 </li>
               </>
             )}
+            {userData?.role === 'admin' && (
+              <>
+                <li>
+                  <NavLink
+                    to={'adminHome'}
+                    lassName={({ isActive }) =>
+                      isActive
+                        ? 'bg-gray-700 font-semibold '
+                        : 'font-semibold  text-white'
+                    }
+                  >
+                    <IoHome className="text-2xl" />
+                    Admin Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={'additems'}
+                    lassName={({ isActive }) =>
+                      isActive
+                        ? 'bg-gray-700 font-semibold '
+                        : 'font-semibold  text-white'
+                    }
+                  >
+                    <IoBagAddOutline className="text-2xl" />
+                    Add Items
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={'/'}
+                    lassName={({ isActive }) =>
+                      isActive
+                        ? 'bg-gray-700 font-semibold '
+                        : 'font-semibold  text-white'
+                    }
+                  >
+                    <MdOutlineMenuOpen className="text-2xl" />
+                    Manage Items
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={'/'}
+                    lassName={({ isActive }) =>
+                      isActive
+                        ? 'bg-gray-700 font-semibold '
+                        : 'font-semibold  text-white'
+                    }
+                  >
+                    <HiMiniUserGroup className="text-2xl" />
+                    All Users
+                  </NavLink>
+                </li>
+              </>
+            )}
 
-            <li>
-              <NavLink
-                to={'adminHome'}
-                lassName={({ isActive }) =>
-                  isActive
-                    ? 'bg-gray-700 font-semibold '
-                    : 'font-semibold  text-white'
-                }
-              >
-                <IoHome className="text-2xl" />
-                Admin Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={'additems'}
-                lassName={({ isActive }) =>
-                  isActive
-                    ? 'bg-gray-700 font-semibold '
-                    : 'font-semibold  text-white'
-                }
-              >
-                <IoBagAddOutline className="text-2xl" />
-                Add Items
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={'/'}
-                lassName={({ isActive }) =>
-                  isActive
-                    ? 'bg-gray-700 font-semibold '
-                    : 'font-semibold  text-white'
-                }
-              >
-                <MdOutlineMenuOpen className="text-2xl" />
-                Manage Items
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={'/'}
-                lassName={({ isActive }) =>
-                  isActive
-                    ? 'bg-gray-700 font-semibold '
-                    : 'font-semibold  text-white'
-                }
-              >
-                <HiMiniUserGroup className="text-2xl" />
-                All Users
-              </NavLink>
-            </li>
             {/* users and admin  use section -------------      */}
             <p className="border border-white my-4"></p>
             <li>
