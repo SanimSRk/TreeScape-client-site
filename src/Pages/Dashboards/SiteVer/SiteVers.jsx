@@ -106,7 +106,7 @@ const SiteVers = () => {
                 </li>
                 <li>
                   <NavLink
-                    to={'/'}
+                    to={'manage-product'}
                     lassName={({ isActive }) =>
                       isActive
                         ? 'bg-gray-700 font-semibold '
@@ -119,7 +119,7 @@ const SiteVers = () => {
                 </li>
                 <li>
                   <NavLink
-                    to={'/'}
+                    to={'all-users'}
                     lassName={({ isActive }) =>
                       isActive
                         ? 'bg-gray-700 font-semibold '

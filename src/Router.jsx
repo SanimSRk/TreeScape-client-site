@@ -9,6 +9,9 @@ import UserHome from './Pages/Dashboards/User/UserHmoe/UserHome';
 import AdminHome from './Pages/Dashboards/AdminSection/AdminHome/AdminHome';
 import AddItems from './Pages/Dashboards/AdminSection/AddItems/AddItems';
 import MyCards from './Pages/Dashboards/User/MyCards/MyCards';
+import AllUserHandile from './Pages/Dashboards/AdminSection/AllUser/AllUserHandile';
+import ManageProducts from './Pages/Dashboards/AdminSection/ManageProduct/ManageProducts';
+import Updates from './Pages/Dashboards/AdminSection/Update/Updates';
 
 export const router = createBrowserRouter([
   {
@@ -41,7 +44,7 @@ export const router = createBrowserRouter([
         path: 'usersHome',
         element: <UserHome></UserHome>,
       },
-      // admin al rout section ---------------
+      // admin all rout section ---------------
       {
         path: 'adminHome',
         element: <AdminHome></AdminHome>,
@@ -49,6 +52,20 @@ export const router = createBrowserRouter([
       {
         path: 'additems',
         element: <AddItems></AddItems>,
+      },
+      {
+        path: 'all-users',
+        element: <AllUserHandile></AllUserHandile>,
+      },
+      {
+        path: 'manage-product',
+        element: <ManageProducts></ManageProducts>,
+      },
+      {
+        path: '/dashboard/updates/:id',
+        element: <Updates></Updates>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/update-deatils/${params.id}`),
       },
       // -----------------user rout section--------------
       {
