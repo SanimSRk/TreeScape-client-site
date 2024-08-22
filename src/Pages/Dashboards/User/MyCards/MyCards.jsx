@@ -3,6 +3,7 @@ import useAxiosPublice from '../../../../Hooks/useAuthPublice/useAxiosPublice';
 import useAuth from '../../../../Hooks/useAuth';
 import { FcDeleteDatabase } from 'react-icons/fc';
 import { MdDelete } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 const MyCards = () => {
   const axiosPublice = useAxiosPublice();
@@ -46,9 +47,17 @@ const MyCards = () => {
       <div className="uppercase flex justify-between items-center my-6">
         <p className=" font-bold">Total orders: {productsData?.length}</p>
         <p className=" font-bold">total price: ${totlePayment} </p>
-        <button className="btn font-bold bg-[#82b440] text-xl text-[#FFFFFF]">
-          Pay
-        </button>
+        {data?.length > 0 ? (
+          <Link to={'/dashboard/payments'}>
+            <button className="btn font-bold bg-[#82b440] text-xl text-[#FFFFFF]">
+              Pay
+            </button>
+          </Link>
+        ) : (
+          <button className="btn font-bold disabled bg-[#82b440] text-xl text-[#FFFFFF]">
+            Pay
+          </button>
+        )}
       </div>
       <div className="overflow-x-auto">
         <table className="table w-full">

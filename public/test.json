@@ -1,0 +1,312 @@
+[
+  {
+    "commonName": "Neem Tree",
+    "scientificName": "Azadirachta indica",
+    "height": "15-20",
+    "price": "20",
+    "lifespan": "50-70",
+    "habitat": "Tropical and semi-arid regions",
+    "description": "Neem trees are known for their medicinal properties and are commonly found in tropical and semi-arid regions.",
+    "image": "https://m.media-amazon.com/images/I/41SUr8c-coL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "commonName": "Banyan Tree",
+    "scientificName": "Ficus benghalensis",
+    "height": "20-25",
+    "price": "50",
+    "lifespan": "100-200",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Banyan trees are large trees known for their extensive root systems and long lifespan.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Ma46QPLLUyluf5RIrb3faSCqlpQ02YRnqN1wcVE_zIEMCMIMkSVLL1gBFmres_GFSog&usqp=CAU"
+  },
+  {
+    "commonName": "Mango Tree",
+    "scientificName": "Mangifera indica",
+    "height": "10-15",
+    "price": "35",
+    "lifespan": "40-100",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Mango trees are known for producing delicious fruits and are native to South Asia.",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/ktuewsw0/plant-sapling/w/z/c/no-perennial-yes-set-of-2-mangohybrid-plant-with-white-pots002-original-imag73syy6rvrate.jpeg?q=90&crop=false"
+  },
+  {
+    "commonName": "Peepal Tree",
+    "scientificName": "Ficus religiosa",
+    "height": "20-30",
+    "price": "40",
+    "lifespan": "100-150",
+    "habitat": "Tropical regions",
+    "description": "Peepal trees are sacred in many cultures and are known for their longevity and large canopies.",
+    "image": "https://www.plantsguru.com/image/cache/azalea/peepal-800x800.jpg"
+  },
+  {
+    "commonName": "Teak Tree",
+    "scientificName": "Tectona grandis",
+    "height": "30-40",
+    "price": "60",
+    "lifespan": "100-150",
+    "habitat": "Tropical regions",
+    "description": "Teak trees are valued for their durable wood, which is commonly used in furniture and construction.",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/plant-sapling/g/i/t/no-annual-yes-tissue-culture-teak-wood-plant-small-1-grow-bag-original-imagtc7ffpwte4wz.jpeg?q=90&crop=false"
+  },
+  {
+    "commonName": "Coconut Tree",
+    "scientificName": "Cocos nucifera",
+    "height": "15-30",
+    "price": "25",
+    "lifespan": "70-100",
+    "habitat": "Tropical coastal regions",
+    "description": "Coconut trees are known for producing coconuts, which are widely used for food and oil.",
+    "image": "https://greenparadiselive.com/cdn/shop/products/GreenCoconut1_1200x1200.jpg?v=1621943141"
+  },
+  {
+    "commonName": "Ashoka Tree",
+    "scientificName": "Saraca asoca",
+    "height": "10-12",
+    "price": "30",
+    "lifespan": "50-100",
+    "habitat": "Tropical regions",
+    "description": "Ashoka trees are known for their beautiful flowers and cultural significance in India.",
+    "image": "https://pune.nurserylive.com/cdn/shop/products/nurserylive-pune-ashoka-tree-polyalthia-longifolia-plant-352662_600x600.jpg?v=1697488057"
+  },
+  {
+    "commonName": "Bamboo",
+    "scientificName": "Bambusoideae",
+    "height": "10-20",
+    "price": "15",
+    "lifespan": "15-30",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Bamboo is known for its fast growth and is used in a variety of products from construction to paper.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6RLNphEeIKskhK5WHrMBN__S4Mb5MEoHlGLldRNHVlQ6Whst2SLUJrdUTobAEKwgEe4&usqp=CAU"
+  },
+  {
+    "commonName": "Gulmohar Tree",
+    "scientificName": "Delonix regia",
+    "height": "10-15",
+    "price": "40",
+    "lifespan": "40-50",
+    "habitat": "Tropical regions",
+    "description": "Gulmohar trees are known for their vibrant red flowers and are often used as ornamental trees.",
+    "image": "https://masjidnursery.in/wp-content/uploads/2020/11/Gulmoharcopy-600x600.jpg"
+  },
+  {
+    "commonName": "Eucalyptus Tree",
+    "scientificName": "Eucalyptus globulus",
+    "height": "30-55",
+    "price": "50",
+    "lifespan": "50-100",
+    "habitat": "Temperate regions",
+    "description": "Eucalyptus trees are known for their aromatic leaves and are commonly used in essential oils.",
+    "image": "https://hayloft.co.uk/media/100.jpg"
+  },
+  {
+    "commonName": "Pine Tree",
+    "scientificName": "Pinus",
+    "height": "25-60",
+    "price": "60",
+    "lifespan": "100-1000",
+    "habitat": "Temperate and boreal regions",
+    "description": "Pine trees are evergreen conifers known for their needles and are commonly used in timber production.",
+    "image": "https://nurserynisarga.in/wp-content/uploads/2021/11/IMG_3958.webp"
+  },
+  {
+    "commonName": "Baobab Tree",
+    "scientificName": "Adansonia",
+    "height": "5-30",
+    "price": "70",
+    "lifespan": "1000-3000",
+    "habitat": "Savannas and dry regions",
+    "description": "Baobab trees are known for their thick trunks and long lifespan, often referred to as the 'Tree of Life'.",
+    "image": "https://www.dobies.co.uk/product_images/ADEN_BAOBAB_T49836.jpg"
+  },
+  {
+    "commonName": "Cedar Tree",
+    "scientificName": "Cedrus",
+    "height": "30-50",
+    "price": "80",
+    "lifespan": "100-1000",
+    "habitat": "Mountainous regions",
+    "description": "Cedar trees are large conifers known for their aromatic wood and are often used in construction and furniture.",
+    "image": "https://i5.walmartimages.ca/images/Enlarge/016/343/6000208016343.jpg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+  },
+  {
+    "commonName": "Olive Tree",
+    "scientificName": "Olea europaea",
+    "height": "5-10",
+    "price": "45",
+    "lifespan": "500-1000",
+    "habitat": "Mediterranean regions",
+    "description": "Olive trees are known for producing olives, which are a key ingredient in Mediterranean cuisine.",
+    "image": "https://m.media-amazon.com/images/I/51V4tfWOXKL.jpg"
+  },
+  {
+    "commonName": "Apple Tree",
+    "scientificName": "Malus domestica",
+    "height": "3-12",
+    "price": "35",
+    "lifespan": "50-80",
+    "habitat": "Temperate regions",
+    "description": "Apple trees are widely cultivated for their fruit, which is consumed worldwide.",
+    "image": "https://urbanplants.co.in/cdn/shop/products/abhishek-s-kumar-fruit-plant-thai-red-water-apple-plant-38659858792663_720x.jpg?v=1672517326"
+  },
+  {
+    "commonName": "Cherry Blossom",
+    "scientificName": "Prunus serrulata",
+    "height": "8-12",
+    "price": "50",
+    "lifespan": "15-20",
+    "habitat": "Temperate regions",
+    "description": "Cherry Blossom trees are famous for their beautiful pink flowers that bloom in spring.",
+    "image": "https://www.elen.in/wp-content/uploads/2021/09/HM-PL-014-2.jpg"
+  },
+  {
+    "commonName": "Jacaranda Tree",
+    "scientificName": "Jacaranda mimosifolia",
+    "height": "10-15",
+    "price": "45",
+    "lifespan": "50-75",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Jacaranda trees are known for their striking purple-blue flowers and are popular ornamental trees.",
+    "image": "https://www.mygarden.com/sites/default/files/styles/inline_scaled_s/public/jacaranda-tree-container-plant-12216675-strauss.jpg?itok=IzcvnWBu"
+  },
+  {
+    "commonName": "Walnut Tree",
+    "scientificName": "Juglans regia",
+    "height": "20-30",
+    "price": "60",
+    "lifespan": "100-150",
+    "habitat": "Temperate regions",
+    "description": "Walnut trees are known for producing walnuts, which are widely consumed as a nutritious food.",
+    "image": "https://plants4presents.co.uk/media/catalog/product/cache/8a790b098bf3cfc2eb0d043e05149db3/w/a/walnuttreebaby2019frontg.jpg"
+  },
+  {
+    "commonName": "Papaya Tree",
+    "scientificName": "Carica papaya",
+    "height": "5-10",
+    "price": "20",
+    "lifespan": "10-20",
+    "habitat": "Tropical regions",
+    "description": "Papaya trees are known for producing papayas, which are tropical fruits rich in vitamins.",
+    "image": "https://www.onlinedelivery.in/images/detailed/35/Papaya_Plant.jpg"
+  },
+  {
+    "commonName": "Rubber Tree",
+    "scientificName": "Hevea brasiliensis",
+    "height": "15-25",
+    "price": "55",
+    "lifespan": "100-200",
+    "habitat": "Tropical regions",
+    "description": "Rubber trees are cultivated for their latex, which is used to produce natural rubber.",
+    "image": "https://cdn.apartmenttherapy.info/image/upload/v1665497422/gen-workflow/product-database/bloomscape_burgundy-rubber-tree_lg_stone.jpg"
+  },
+  {
+    "commonName": "Willow Tree",
+    "scientificName": "Salix",
+    "height": "10-25",
+    "price": "30",
+    "lifespan": "50-75",
+    "habitat": "Temperate and wetland regions",
+    "description": "Willow trees are known for their graceful branches and are often found near water bodies.",
+    "image": "https://i.ibb.co/HhQxsWc/yes-annual.webp"
+  },
+  {
+    "commonName": "Mahogany Tree",
+    "scientificName": "Swietenia mahagoni",
+    "height": "30-35",
+    "price": "90",
+    "lifespan": "200-300",
+    "habitat": "Tropical regions",
+    "description": "Mahogany trees are valued for their high-quality wood, often used in fine furniture.",
+    "image": "https://www.hyanniscountrygarden.com/wp-content/uploads/2022/03/pussy-willow-tree-660x1024.png"
+  },
+  {
+    "commonName": "Redwood Tree",
+    "scientificName": "Sequoia sempervirens",
+    "height": "70-115",
+    "price": "120",
+    "lifespan": "500-2000",
+    "habitat": "Coastal regions",
+    "description": "Redwood trees are the tallest trees in the world and are known for their impressive height and longevity.",
+    "image": "https://img1.exportersindia.com/product_images/bc-full/2021/8/4891721/mahogany-plant-1629974938-5959702.jpeg"
+  },
+  {
+    "commonName": "Oak Tree",
+    "scientificName": "Quercus",
+    "height": "20-30",
+    "price": "70",
+    "lifespan": "200-300",
+    "habitat": "Temperate regions",
+    "description": "Oak trees are strong hardwood trees known for their longevity and are commonly used in furniture making.",
+    "image": "https://cdn.shopify.com/s/files/1/0025/4309/1770/files/oak-tree-sapling-main_large.jpg?v=1556018783"
+  },
+  {
+    "commonName": "Palm Tree",
+    "scientificName": "Arecaceae",
+    "height": "10-20",
+    "price": "25",
+    "lifespan": "70-100",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Palm trees are known for their distinctive fronds and are often associated with tropical landscapes.",
+    "image": "https://m.media-amazon.com/images/I/71BBHqOYFRL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "commonName": "Cypress Tree",
+    "scientificName": "Cupressus",
+    "height": "20-30",
+    "price": "55",
+    "lifespan": "200-600",
+    "habitat": "Temperate regions",
+    "description": "Cypress trees are evergreen conifers known for their durability and are often used in landscaping.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSpYIQ7fPbUIwBho3CPbMSQU6Yu9sfVG2sPA&s"
+  },
+  {
+    "commonName": "Maple Tree",
+    "scientificName": "Acer",
+    "height": "10-15",
+    "price": "40",
+    "lifespan": "100-300",
+    "habitat": "Temperate regions",
+    "description": "Maple trees are known for their beautiful fall foliage and are a source of maple syrup.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpVvAAXx_nujm69e8h0ymQqSA0kKEhGiRSxcvjXP_52gFnX9ACXYwaE1P6avX5T31ufo&usqp=CAU"
+  },
+  {
+    "commonName": "Birch Tree",
+    "scientificName": "Betula",
+    "height": "10-20",
+    "price": "30",
+    "lifespan": "30-50",
+    "habitat": "Temperate regions",
+    "description": "Birch trees are known for their distinctive white bark and are often found in cooler climates.",
+    "image": "https://media.istockphoto.com/id/175645102/photo/birch-tree-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=7oN0fpuLSjAqx0xNzhG4dGaehuV8MOhRB4ZSF41QWz8="
+  },
+  {
+    "commonName": "Lemon Tree",
+    "scientificName": "Citrus limon",
+    "height": "3-6",
+    "price": "20",
+    "lifespan": "50-100",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Lemon trees are known for producing lemons, which are widely used in culinary applications.",
+    "image": "https://dukaan.b-cdn.net/700x700/webp/730950/570a0a01-8039-4174-b518-9bf54edfe5fb/lemon1-5f4c692d-2838-41ca-a95e-4453045affd0.png"
+  },
+  {
+    "commonName": "Orange Tree",
+    "scientificName": "Citrus sinensis",
+    "height": "5-8",
+    "price": "25",
+    "lifespan": "50-100",
+    "habitat": "Tropical and subtropical regions",
+    "description": "Orange trees are cultivated for their sweet fruit, which is consumed fresh or used to make juice.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3dqUW5r98-4TRPPJOSj_rx8RfNODiWC6e3Q&s"
+  },
+  {
+    "commonName": "Plum Tree",
+    "scientificName": "Prunus domestica",
+    "height": "3-6",
+    "price": "30",
+    "lifespan": "20-30",
+    "habitat": "Temperate regions",
+    "description": "Plum trees are known for producing plums, which are enjoyed fresh or dried as prunes.",
+    "image": "https://seed2plant.in/cdn/shop/products/Layer9copy_493x_109a7b9a-9385-4055-b853-77b06f9c5524.webp?v=1674735425&width=1500"
+  }
+]

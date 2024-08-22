@@ -12,6 +12,7 @@ import MyCards from './Pages/Dashboards/User/MyCards/MyCards';
 import AllUserHandile from './Pages/Dashboards/AdminSection/AllUser/AllUserHandile';
 import ManageProducts from './Pages/Dashboards/AdminSection/ManageProduct/ManageProducts';
 import Updates from './Pages/Dashboards/AdminSection/Update/Updates';
+import Paymens from './Pages/Payments/Paymens';
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
         element: <Updates></Updates>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/update-deatils/${params.id}`),
+      },
+      {
+        path: '/dashboard/payments',
+        element: <Paymens></Paymens>,
       },
       // -----------------user rout section--------------
       {
