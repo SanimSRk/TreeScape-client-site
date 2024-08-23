@@ -62,7 +62,7 @@ const OurProductCart = ({ pro }) => {
         <div className="flex justify-between">
           <p className="">
             {' '}
-            <span className="font-semibold"> Height :</span> {height} years{' '}
+            <span className="font-semibold"> Height :</span> {height} meters{' '}
           </p>
           <p>
             {' '}

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import OurProductCart from './OurProductCart';
 import useAxiosPublice from '../../../Hooks/useAuthPublice/useAxiosPublice';
+import { Link } from 'react-router-dom';
 
 const OurProduct = () => {
   const axiosPublice = useAxiosPublice();
@@ -23,9 +24,11 @@ const OurProduct = () => {
         ))}
       </div>
       <div className="text-center mt-7">
-        <button className="btn bg-[#6a8c33] font-semibold text-white">
-          See More
-        </button>
+        <Link to={'/products'}>
+          <button className="btn bg-[#6a8c33] font-semibold text-white">
+            See More
+          </button>
+        </Link>
       </div>
     </div>
   );
