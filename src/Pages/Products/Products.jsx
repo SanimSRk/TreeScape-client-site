@@ -16,6 +16,139 @@ const Products = () => {
     pages.push(i + 1);
   }
   console.log(pages);
+
+  const handileClickeScientfice = e => {
+    const scientfic = e.target.value;
+    axiosPublice.get(`/scientfic-name?scient=${scientfic}`).then(res => {
+      console.log(res.data);
+      setProductData(res.data);
+    });
+  };
+
+  const handileClickHeightRange = e => {
+    if (e.target.value === '20') {
+      axiosPublice.get(`/height-range?main=${5}&max=${20}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '30') {
+      axiosPublice.get(`/height-range?main=${20}&max=${30}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '40') {
+      axiosPublice.get(`/height-range?main=${30}&max=${40}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '50') {
+      axiosPublice.get(`/height-range?main=${40}&max=${50}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '60') {
+      axiosPublice.get(`/height-range?main=${50}&max=${60}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '70') {
+      axiosPublice.get(`/height-range?main=${60}&max=${70}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '80') {
+      axiosPublice.get(`/height-range?main=${70}&max=${80}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '90') {
+      axiosPublice.get(`/height-range?main=${80}&max=${90}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '100') {
+      axiosPublice.get(`/height-range?main=${90}&max=${100}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '110') {
+      axiosPublice.get(`/height-range?main=${100}&max=${110}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    }
+  };
+  const handileClickPriceRange = e => {
+    if (e.target.value === '20') {
+      axiosPublice.get(`/prices-range?main=${1}&max=${20}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '40') {
+      axiosPublice.get(`/prices-range?main=${20}&max=${40}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '50') {
+      axiosPublice.get(`/prices-range?main=${40}&max=${50}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '70') {
+      axiosPublice.get(`/prices-range?main=${50}&max=${70}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '80') {
+      axiosPublice.get(`/prices-range?main=${70}&max=${80}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '100') {
+      axiosPublice.get(`/prices-range?main=${80}&max=${100}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '120') {
+      axiosPublice.get(`/prices-range?main=${100}&max=${120}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '150') {
+      axiosPublice.get(`/prices-range?main=${120}&max=${150}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '180') {
+      axiosPublice.get(`/prices-range?main=${150}&max=${180}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '200') {
+      axiosPublice.get(`/prices-range?main=${180}&max=${200}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '300') {
+      axiosPublice.get(`/prices-range?main=${200}&max=${300}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '400') {
+      axiosPublice.get(`/prices-range?main=${300}&max=${400}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    } else if (e.target.value === '500') {
+      axiosPublice.get(`/prices-range?main=${400}&max=${500}`).then(res => {
+        setProductData(res.data);
+        console.log(res.data);
+      });
+    }
+  };
+
+  //-------------pagination section--------------
+
   const { data, refetch } = useQuery({
     queryKey: [itemPages, currentPage, itemCount, 'product-data'],
     queryFn: async () => {
@@ -26,6 +159,7 @@ const Products = () => {
       return data;
     },
   });
+
   useEffect(() => {
     axiosPublice.get('/count-pages').then(res => {
       console.log(res.data);
@@ -60,6 +194,7 @@ const Products = () => {
       setProductData(res.data);
     });
   };
+
   return (
     <div className="">
       <div className="grid mt-3 justify-center w-full items-center rounded-lg md:h-[420px] h-[320px] lg:h-[550px] bg-center bg-cover bg-[linear-gradient(90deg,rgb(21,21,21,0.7),rgba(21,21,21,0.7)100%),url(/pexels-enginakyurt-10364572.jpg)] ">
@@ -86,8 +221,13 @@ const Products = () => {
         </div>
       </div>
       <div className="mb-[110px]">
-        <div className="grid lg:grid-cols-4 border-2  my-12 border-[#82b440] py-14 px-12 shadow-lg  lg:w-[90%] mx-auto md:grid-cols-3 lg:gap-4 md:gap-3 grid-cols-1">
-          <select className="border p-4" name="" id="">
+        <div className="grid lg:grid-cols-3 border-2  my-12 border-[#82b440] py-14 px-12 shadow-lg  lg:w-[90%] mx-auto md:grid-cols-2 lg:gap-4 md:gap-3 grid-cols-1">
+          <select
+            onChange={handileClickeScientfice}
+            className="border p-4"
+            name=""
+            id=""
+          >
             <option disabled selected>
               Scientfic Name
             </option>
@@ -124,11 +264,16 @@ const Products = () => {
             <option value="Prunus domestica">Prunus domestica</option>
           </select>
 
-          <select className="border p-4" name="" id="">
+          <select
+            onChange={handileClickHeightRange}
+            className="border p-4"
+            name=""
+            id=""
+          >
             <option disabled selected>
               Height range
             </option>
-            <option value="20">10-20 meters</option>
+            <option value="20">5-20 meters</option>
             <option value="30">20-30 meters</option>
             <option value="40">30-40 meters</option>
             <option value="50">40-50 meters</option>
@@ -140,7 +285,12 @@ const Products = () => {
             <option value="110">100-110 meters</option>
             <option value="120">100-120 meters</option>
           </select>
-          <select className="border p-4" name="" id="">
+          <select
+            onChange={handileClickPriceRange}
+            className="border p-4"
+            name=""
+            id=""
+          >
             <option disabled selected>
               Price range
             </option>
@@ -157,27 +307,6 @@ const Products = () => {
             <option value="300">200-300$</option>
             <option value="400">300-400$</option>
             <option value="500">400-500$</option>
-          </select>
-          <select className="border p-4" name="" id="">
-            <option disabled selected>
-              Life Span
-            </option>
-            <option value="50">1-50 years</option>
-            <option value="60">50-60 years</option>
-            <option value="80">60-80 years</option>
-            <option value="100">80-100 years</option>
-            <option value="150">100-150 years</option>
-            <option value="200">150-200 years</option>
-            <option value="300">200-300 years</option>
-            <option value="400">300-400 years</option>
-            <option value="600">400-600 years</option>
-            <option value="800">600-800 years</option>
-            <option value="1000">800-1000 years</option>
-            <option value="1500">1000-1500 years</option>
-            <option value="2000">1500-2000 years</option>
-            <option value="2500">2000-2500 years</option>
-            <option value="3000">2500-3000 years</option>
-            <option value="4000">3000-4000 years</option>
           </select>
         </div>
 
